@@ -1,7 +1,7 @@
 import { useDispatch } from 'react-redux';
 import { useEffect, lazy } from 'react';
 import { fetchCurrentUser } from 'redux/auth/operations';
-import { Container } from './App.styled';
+// import { Container } from './App.styled';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from 'components/Layout';
 import { PrivateRoute } from 'components/PrivateRoute';
@@ -23,7 +23,7 @@ export const App = () => {
 
   return (
     !isRefreshing && (
-      <Container>
+      <div>
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<Home />} />
@@ -50,7 +50,7 @@ export const App = () => {
             />
           </Route>
         </Routes>
-      </Container>
+      </div>
     )
   );
 };

@@ -1,6 +1,9 @@
+import ContactsIcon from '@mui/icons-material/Contacts';
+import { Typography } from '@mui/material';
+
 const styles = {
   container: {
-    minHeight: 'calc(100vh - 50px)',
+    minHeight: 'calc(100vh - 150px)',
     display: 'flex',
     alignItems: 'center',
     justifyContent: 'center',
@@ -15,12 +18,10 @@ const styles = {
 export default function Home() {
   return (
     <div style={styles.container}>
-      <h1 style={styles.title}>
+      <Typography paragraph variant="h1" align="center" fontWeight="500">
         Contact manager welcome page{' '}
-        <span role="img" aria-label="Greeting icon">
-          💁‍♀️
-        </span>
-      </h1>
+        <ContactsIcon color="primary" fontSize="large" sx={{ fontSize: 70 }} />
+      </Typography>
     </div>
   );
 }

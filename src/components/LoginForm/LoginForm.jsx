@@ -1,9 +1,12 @@
+import { Button, Link, TextField, Typography } from '@mui/material';
 import { useDispatch } from 'react-redux';
+import { useNavigate } from 'react-router-dom';
 import { logIn } from 'redux/auth/operations';
-import { Form, Label } from './LoginForm.styled';
+import { Form } from './LoginForm.styled';
 
 export const LoginForm = () => {
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   const handleSubmit = e => {
     e.preventDefault();
@@ -17,17 +20,23 @@ export const LoginForm = () => {
     form.reset();
   };
 
+  const handleNavigate = () => {
+    navigate('/register');
+  };
+
   return (
     <Form onSubmit={handleSubmit} autoComplete="off">
-      <Label>
-        Email
-        <input type="email" name="email" />
-      </Label>
-      <Label>
-        Password
-        <input type="password" name="password" />
-      </Label>
-      <button type="submit">Log In</button>
+      <TextField label="Email" fullWidth type="email" name="email" />
+      <TextField label="Password" fullWidth type="password" name="password" />
+      <Button variant="contained" type="submit">
+        Log In
+      </Button>
+      <Typography>
+        Not registred yet?{' '}
+        <Link onClick={handleNavigate} fontSize="1rem" component="button">
+          Sign Up NOW
+        </Link>
+      </Typography>
     </Form>
   );
 };
