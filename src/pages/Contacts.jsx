@@ -34,7 +34,7 @@ export default function Tasks() {
           {isLoading && !error ? (
             <b>Request in progress...</b>
           ) : (
-            <Section title="Contacts">
+            <>
               {contacts.length > 0 ? (
                 <>
                   <Filter />
@@ -43,7 +43,7 @@ export default function Tasks() {
               ) : (
                 <Notification message="Ooops, there is no contact in your phonebook" />
               )}
-            </Section>
+            </>
           )}
         </div>
       )}

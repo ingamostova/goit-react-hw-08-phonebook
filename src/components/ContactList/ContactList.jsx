@@ -1,7 +1,7 @@
 import { ContactItem } from 'components/ContactItem/ContactItem';
-import { List, ListItem } from './ContactList.styled';
 import { useSelector } from 'react-redux';
 import { getContacts, getFilter } from 'redux/selectors';
+import { Grid } from '@mui/material';
 
 const filterContacts = (items, filter) =>
   items.filter(item => item.name.toLowerCase().includes(filter.toLowerCase()));
@@ -12,12 +12,12 @@ export const ContactList = () => {
 
   const visibleContacts = filterContacts(contacts, filter);
   return (
-    <List>
+    <Grid container spacing={2} direction="row" sx={{ mt: '0.5rem' }}>
       {visibleContacts.map(item => (
-        <ListItem key={item.id}>
+        <Grid item xs={12} sm={6} md={4} key={item.id}>
           <ContactItem contact={item} />
-        </ListItem>
+        </Grid>
       ))}
-    </List>
+    </Grid>
   );
 };

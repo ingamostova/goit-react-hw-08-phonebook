@@ -1,7 +1,8 @@
-import { SearchTitle, Search } from './Filter.styled';
+// import { SearchTitle, Search } from './Filter.styled';
 import { useDispatch, useSelector } from 'react-redux';
 import { setFilter } from 'redux/filterSlice';
 import { getFilter } from 'redux/selectors';
+import { Container, TextField } from '@mui/material';
 
 export const Filter = () => {
   const dispatch = useDispatch();
@@ -12,9 +13,15 @@ export const Filter = () => {
   };
 
   return (
-    <>
-      <SearchTitle>Find contacts by name</SearchTitle>
-      <Search type="text" onChange={handleChange} value={value} />
-    </>
+    <Container maxWidth="sm" sx={{ ml: '0' }}>
+      <TextField
+        variant="standard"
+        label="Search by name"
+        fullWidth
+        type="text"
+        onChange={handleChange}
+        value={value}
+      />
+    </Container>
   );
 };
