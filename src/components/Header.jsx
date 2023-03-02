@@ -1,4 +1,4 @@
-import { AppBar, Toolbar, Typography } from '@mui/material';
+import { AppBar, Container, Toolbar, Typography } from '@mui/material';
 import { Navigation } from './Navigation/Navigation';
 import { UserMenu } from './UserMenu/UserMenu';
 import { AuthNav } from './AuthNav/AuthNav';
@@ -9,13 +9,15 @@ export const Header = () => {
 
   return (
     <AppBar position="static">
-      <Toolbar>
-        <Typography variant="h6" component="span" sx={{ flexGrow: 1 }}>
-          <Navigation />
-        </Typography>
+      <Container maxWidth="xl">
+        <Toolbar>
+          <Typography variant="h6" component="span" sx={{ flexGrow: 1 }}>
+            <Navigation />
+          </Typography>
 
-        <Typography>{isLoggedIn ? <UserMenu /> : <AuthNav />}</Typography>
-      </Toolbar>
+          <Typography>{isLoggedIn ? <UserMenu /> : <AuthNav />}</Typography>
+        </Toolbar>
+      </Container>
     </AppBar>
   );
 };

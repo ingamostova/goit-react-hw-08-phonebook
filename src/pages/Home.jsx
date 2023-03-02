@@ -19,7 +19,7 @@ export default function Home() {
   return (
     <div style={styles.container}>
       <Typography paragraph variant="h1" align="center" fontWeight="500">
-        Contact manager welcome page{' '}
+        Phonebook welcome page{' '}
         <ContactsIcon color="primary" fontSize="large" sx={{ fontSize: 70 }} />
       </Typography>
     </div>

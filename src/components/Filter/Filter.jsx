@@ -13,7 +13,7 @@ export const Filter = () => {
   };
 
   return (
-    <Container maxWidth="sm" sx={{ ml: '0' }}>
+    <Container maxWidth="xs" sx={{ ml: '0' }}>
       <TextField
         variant="standard"
         label="Search by name"

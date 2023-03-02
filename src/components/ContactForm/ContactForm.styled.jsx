@@ -3,23 +3,22 @@ import styled from '@emotion/styled';
 import { Form, Field, ErrorMessage } from 'formik';
 
 export const Forma = styled(Form)`
-  padding: 20px 0;
   display: flex;
   flex-direction: column;
   gap: 20px;
-  margin-bottom: 30px;
+  margin-bottom: 20px;
 `;
 
 export const Input = styled(Field)`
   display: block;
   padding: 5px;
-  font-size: 20px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   color: #2a2a2a;
 `;
 
 export const Label = styled.label`
-  font-size: 20px;
+  font-size: 16px;
   font-family: Arial, Helvetica, sans-serif;
   color: #2a2a2a;
 `;
@@ -42,6 +41,8 @@ export const Btn = styled.button`
   :focus {
     outline: 1px solid #2a2a2a;
     cursor: pointer;
-    background-color: #bbceeb;
+    color: #fff;
+    background-color: #1976d2;
+    outline: none;
   }
 `;

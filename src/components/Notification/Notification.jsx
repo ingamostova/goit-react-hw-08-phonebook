@@ -1,8 +1,13 @@
+import { Alert, AlertTitle } from '@mui/material';
 import PropTypes from 'prop-types';
-import { Info } from './Notification.styled';
 
 export const Notification = ({ message }) => {
-  return <Info>{message}</Info>;
+  return (
+    <Alert severity="info">
+      <AlertTitle>Info</AlertTitle>
+      {message}
+    </Alert>
+  );
 };
 
 Notification.propTypes = {
