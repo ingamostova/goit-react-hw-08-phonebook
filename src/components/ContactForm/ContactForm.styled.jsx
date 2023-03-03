@@ -1,6 +1,5 @@
-/* eslint-disable no-unused-vars */
 import styled from '@emotion/styled';
-import { Form, Field, ErrorMessage } from 'formik';
+import { Form, Field } from 'formik';
 
 export const Forma = styled(Form)`
   display: flex;

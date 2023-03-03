@@ -1,6 +1,5 @@
 import { useAuth } from 'hooks';
 import { Link } from './Navigation.styled';
-// import HomeIcon from '@mui/icons-material/Home';
 
 export const Navigation = () => {
   const { isLoggedIn } = useAuth();

@@ -8,7 +8,7 @@ import { Notification } from 'components/Notification/Notification';
 import { fetchContacts } from 'redux/operations';
 import { getIsLoading, getContacts, getError } from 'redux/selectors';
 import { Loading } from 'components/Skeleton';
-import { Container } from '@mui/material';
+import { Alert, Container } from '@mui/material';
 
 export default function Tasks() {
   const dispatch = useDispatch();
@@ -27,7 +27,7 @@ export default function Tasks() {
       </Helmet>
       <ContactForm />
       {error && !isLoading ? (
-        error
+        <Alert severity="error">{error}</Alert>
       ) : (
         <div>
           {isLoading && !error ? (
@@ -46,9 +46,6 @@ export default function Tasks() {
           )}
         </div>
       )}
-      {/* <ContactForm />
-      <div>{isLoading && 'Request in progress...'}</div>
-      <ContactList /> */}
     </Container>
   );
 }

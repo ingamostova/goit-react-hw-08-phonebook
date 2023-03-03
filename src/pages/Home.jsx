@@ -1,27 +1,38 @@
-import ContactsIcon from '@mui/icons-material/Contacts';
-import { Typography } from '@mui/material';
-
-const styles = {
-  container: {
-    minHeight: 'calc(100vh - 150px)',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-  title: {
-    fontWeight: 500,
-    fontSize: 48,
-    textAlign: 'center',
-  },
-};
+import ContactPhoneIcon from '@mui/icons-material/ContactPhone';
+import { Container, Typography } from '@mui/material';
 
 export default function Home() {
   return (
-    <div style={styles.container}>
+    <Container
+      maxWidth="lg"
+      sx={{
+        mt: '200px',
+        display: 'flex',
+        flexDirection: 'column',
+        alignItems: 'center',
+      }}
+    >
       <Typography paragraph variant="h1" align="center" fontWeight="500">
-        Phonebook welcome page{' '}
-        <ContactsIcon color="primary" fontSize="large" sx={{ fontSize: 70 }} />
+        Phonebook welcome{' '}
       </Typography>
-    </div>
+      <Typography
+        variant="h1"
+        align="center"
+        fontWeight="500"
+        sx={{
+          display: 'flex',
+          flexDirection: 'row',
+          alignItems: 'center',
+          gap: '20px',
+        }}
+      >
+        page{'  '}
+        <ContactPhoneIcon
+          color="primary"
+          fontSize="large"
+          sx={{ fontSize: 80 }}
+        />
+      </Typography>
+    </Container>
   );
 }

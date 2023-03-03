@@ -1,15 +1,12 @@
 import { Outlet } from 'react-router-dom';
-// import { Toaster } from 'react-hot-toast';
-// import { AppBar } from './AppBar/AppBar';
 import { Suspense } from 'react';
-import { Header } from './Header';
+import { Header } from './Header/Header';
 import { Container } from '@mui/material';
 import { RotatingLines } from 'react-loader-spinner';
 
 export const Layout = () => {
   return (
     <div>
-      {/* <AppBar /> */}
       <Header />
       <Suspense
         fallback={
@@ -28,7 +25,6 @@ export const Layout = () => {
           <Outlet />
         </Container>
       </Suspense>
-      {/* <Toaster position="top-right" reverseOrder={false} /> */}
     </div>
   );
 };

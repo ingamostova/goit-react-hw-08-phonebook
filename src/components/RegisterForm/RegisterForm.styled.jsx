@@ -10,9 +10,3 @@ export const Form = styled.form`
   gap: 20px;
   padding-top: 20px;
 `;
-
-export const Label = styled.label`
-  display: flex;
-  flex-direction: column;
-  margin-bottom: 16px;
-`;

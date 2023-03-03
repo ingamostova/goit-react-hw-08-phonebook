@@ -1,7 +1,6 @@
 import { useDispatch } from 'react-redux';
 import { useEffect, lazy } from 'react';
 import { fetchCurrentUser } from 'redux/auth/operations';
-// import { Container } from './App.styled';
 import { Route, Routes } from 'react-router-dom';
 import { Layout } from 'components/Layout';
 import { PrivateRoute } from 'components/PrivateRoute';

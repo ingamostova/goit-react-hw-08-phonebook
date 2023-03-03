@@ -45,33 +45,6 @@ export const ContactForm = () => {
       validationSchema={schema}
       onSubmit={handleSubmit}
     >
-      {/* <Forma autoComplete="off">
-        <div>
-          <TextField
-            fullWidth
-            variant="filled"
-            label="Name"
-            type="text"
-            name="name"
-          />
-          <ErrorMessage name="name" render={msg => <Error>{msg}</Error>} />
-        </div>
-        <div>
-          <TextField
-            fullWidth
-            variant="filled"
-            label="Phone Number"
-            type="tel"
-            name="number"
-          />
-          <ErrorMessage name="number" render={msg => <Error>{msg}</Error>} />
-        </div>
-        <Container>
-          <Button variant="outlined" type="submit">
-            Add contact
-          </Button>
-        </Container>
-      </Forma> */}
       <Forma autoComplete="off">
         <Label htmlFor="name">
           Name
