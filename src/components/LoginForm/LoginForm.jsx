@@ -33,7 +33,7 @@ export const LoginForm = () => {
       </Button>
       <Typography>
         Not registred yet?{' '}
-        <Link onClick={handleNavigate} fontSize="1rem" component="button">
+        <Link onClick={handleNavigate} fontSize="1rem" variant="body2" href="#">
           Sign Up NOW
         </Link>
       </Typography>
